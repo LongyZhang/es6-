@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .item {
+            width: 50px;
+            height: 50px;
+            border: 1px solid skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="page-header">Change color</h2>
+        <div class="row pr-2">
+            <div class="item mr-2"></div>
+            <div class="item mr-2"></div>
+            <div class="item mr-2"></div>
+        </div>
+    </div>
+    <script>
+        let items = document.querySelectorAll(".item")
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener("click", function () {
+                // this.style.background = "pink"
+
+                items[i].style.background === "pink" ? items[i].style.background = "white" : items[i].style.background = "pink"
+            })
+        }
+        // let only works in block
+
+    </script>
+
+</body>
+
+</html>
