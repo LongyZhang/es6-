@@ -12,11 +12,23 @@
 
     <script>
         // iterator is attribute from object
-        let a = [1, 34, 6, 8, 8]
+        // for of iteration, i of a, means i is single value from a 
 
-        for (const i of a) {
+        let a = [1, 34, 6, 8, 8]
+        console.log(a);
+        // 1 ： for of , i means value in array
+        for (let i of a) {
             console.log(i);
         }
+        // 2: for in , i means key in array
+        for (let i in a) {
+            console.log(i);
+        }
+
+
+
+        // iterator is acatually pototype object 
+        // iterator has linklist concept 
 
     </script>
 </body>
