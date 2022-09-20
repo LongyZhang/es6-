@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest argument</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // es6 impo3rt rest argument to replace arguments
+        // es6 returns object
+        function date() {
+            console.log(arguments);
+        }
+
+        date('ca', 'das', '312')
+
+
+
+        // rest parameters 
+        // rest expression return the array rather than object
+        // benefits if the return is array, we can process the argument by using map , filter, reduce
+        function date1(a, ...args) {
+            console.log(a, args);
+
+        }
+        // args will return the all values to array
+
+        const a = { name: 'longy', age: 32 }
+
+        date1(a, 2, 3, 'cao', 'ni', 'ma')
+
+
+    </script>
+</body>
+
+</html>

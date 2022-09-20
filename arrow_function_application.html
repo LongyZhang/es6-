@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+
+    <script>
+
+        let ad = document.querySelector("#ad")
+
+        ad.addEventListener('click', function () {
+            // this.style.background = 'pink'
+            setTimeout(() => {
+                this.style.background = 'pink'
+            }, 2000)
+        })
+        // the arrow function can access the outside of scope
+        // which means the arrow function points to last scope 
+
+        const arr = [1, 2, 5, 234, 123, 100, 7]
+
+        // const result = arr.filter(function (item) {
+        //     return item % 2 === 0 ? true : false
+        // })
+
+        // arrary 
+        const result = arr.filter(item => {
+            return item % 2 === 0 ? true : false
+        })
+        console.log(result);
+
+        // arrow function is good for callback when there has nothing to do with this
+        
+
+
+    </script>
+</body>
+
+</html>

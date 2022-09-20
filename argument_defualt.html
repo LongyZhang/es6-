@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // argument initial values
+
+        // give the initial value to c , if you dont pass any value to c
+        // by default default value is located at end of arguments 
+        function add(a, b, c = 10) {
+            return a + b + c
+        }
+
+        console.log(add(3, 56, 3));
+
+
+        function connect({ host = '198.162.1.1', username, password, port }) {
+            console.log(host);
+            console.log(username);
+            console.log(password);
+            console.log(port);
+        }
+        connect({ host: 'localhost', username: 'longy', password: 'root', port: 336 })
+    </script>
+</body>
+
+</html>

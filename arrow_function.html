@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // arrow function allow you to minimize the function words
+        let fn = function (a, b) {
+
+        }
+
+        let fn2 = (a, b) => {
+            console.log(a + b);
+        }
+
+        fn2(3, 5)
+
+        // feature of arrow function
+        // 1: this is static,  this in arrow function will be got from upper level of scope
+        // 2 : can not instance object by using arrow function
+        let fn3 = (a, b) => {
+            console.log(this);
+        }
+        fn3(3, 9)
+
+        function getName() {
+            console.log(this.name);
+        }
+
+        let getName2 = () => {
+            console.log(this.name);
+        }
+        window.name = 'longy'
+
+        const school = {
+            name: 'atlongy', getName, getName2
+        }
+
+        getName();
+        getName2()
+
+        school.getName();
+        school.getName2();
+
+        // feature 3 : arrow function can not create instance for object
+        function Person(name, age) {
+            this.name = name
+            this.age = age
+        }
+
+        // let Person = (name, age) => {
+        //     this.name = name
+        //     this.age = age
+        // }
+        // arrow function can not be construtor for object
+
+        let me = new Person('xiao', 30);
+        console.log(me);
+
+
+        // feature 4 : can not use arguments variable 
+
+        let fn4 = () => {
+            console.log(arguments);
+        }
+
+        // feature 5 : simply arrow function
+        // when there is only one argument, you can simply the bracket
+        let add = n => {
+            return n + n
+        }
+
+        console.log(add(9));
+
+        // when there is one line for script ,we can simply bracket
+
+        let mul = n => n * n
+        console.log(mul);
+    </script>
+</body>
+
+</html>
