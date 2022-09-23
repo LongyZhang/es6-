@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // async programming,
+
+        const p = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                let data = 'db data'
+                let error = 'data access failed'
+                // resolve(data)
+                reject(error)
+                // if you call resolve, the status is success 
+            }, 2000)
+        })
+
+
+        // then we can call then function, if status is successed
+
+        // if you called resolve in Promise function, it will call first function in then
+        // if you called reject in Promise function, it will call second function in then
+        // p.then(function (value) {
+        //     console.log(value);
+        // }, function (reason) {
+        //     console.log(reason);
+        // })
+
+        p.then(res => (value){
+            console.log(value);
+        }, fail => (reason){
+            console.log(reason);
+        })
+    </script>
+
+
+</body>
+
+</html>
